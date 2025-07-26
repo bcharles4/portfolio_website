@@ -100,7 +100,6 @@ nav {
 }
 
 .account-con {
-    margin: 20px;
     width: clamp(180px, 24%, 240px);
     height: auto;
     border-radius: 28px;
@@ -212,9 +211,11 @@ nav {
     color: #222;
 }
 span {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 3vw, 2.2rem);
     color: #555;
-    line-height: 1.5;
+    line-height: 2.25;
+    font-family: "Takota", sans-serif;
+    font-weight: 600;
 }
 
 .content li {
@@ -228,9 +229,9 @@ span {
     position: absolute;
     left: 0;
     top: 0.2em;
-    width: 1em;
+    width: 1.5em;
     height: 1em;
-    background-image: url(../images/asterisk.png);
+    background-image: url(../images/asterisks.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -243,7 +244,6 @@ span {
  width: clamp(150px, 20%, 200px);
  padding: 10px;
  height: auto;
- margin: 0.5em;
  background: #222;
  color: white;
  border: none;
@@ -254,15 +254,16 @@ span {
  position: relative;
  z-index: 1;
  overflow: hidden;
+ font-family: "Founder", sans-serif;
 }
 
 button:hover {
- color: black;
+ color: white;
 }
 
 button:after {
  content: "";
- background: #ffd101;
+ background: orangered;
  position: absolute;
  z-index: -1;
  left: -20%;
