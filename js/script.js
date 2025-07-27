@@ -51,5 +51,39 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
 
+      const menuIcon = document.getElementById("menu-icon");
+    const popupMenu = document.getElementById("popupMenu");
+    const popupItems = popupMenu.querySelectorAll("li");
 
+    let isMenuVisible = false;
+
+    menuIcon.addEventListener("click", () => {
+        if (!isMenuVisible) {
+            popupMenu.style.display = "block";
+
+            gsap.fromTo(popupItems,
+                { opacity: 0, x: -20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    stagger: 0.1,
+                    ease: "power2.out"
+                }
+            );
+        } else {
+            gsap.to(popupItems, {
+                opacity: 0,
+                y: -10,
+                duration: 0.2,
+                stagger: 0.05,
+                ease: "power2.in",
+                onComplete: () => {
+                    popupMenu.style.display = "none";
+                }
+            });
+        }
+
+        isMenuVisible = !isMenuVisible;
+    });
 });

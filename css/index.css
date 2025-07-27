@@ -68,8 +68,13 @@
     height: 24px;
     fill: white;
     margin: 8px;
+    transition: fill 0.3s ease;
+    cursor: pointer;
 }
 
+#icon:hover {
+    fill: orangered;
+}
 
 nav {
     width: 100%;
@@ -182,6 +187,49 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
+
+.popup-menu {
+    position: absolute;
+    top: 0px; /* adjust as needed */
+    left: 55px; /* adjust as needed */
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    padding: 20px 50px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    font-family: "titillium web", sans-serif;
+    
+}
+
+.popup-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;           /* Inline layout */
+    gap: 20px;               /* Space between items */
+    align-items: center;
+}
+
+.popup-menu li {
+    opacity: 0; /* for animation */
+}
+
+.popup-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.popup-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.popup-menu a:hover {
+    color: orangered;
+}
+
 
 .content
 {
@@ -297,6 +345,24 @@ button:hover:after {
         width: 22px;
     }
 
+    .popup-menu{
+        top: 4px;
+    }
+    .popup-menu ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .popup-menu li {
+        width: 20%;
+    }
+
+    .popup-menu a {
+        display: block;
+        width: 100%;
+    }
+
     .content{
         margin: 0 30% 100% 18%;
 
@@ -320,6 +386,10 @@ button:hover:after {
 
     .account-con {
        display: none;
+    }
+
+    .account-con1 {
+        z-index: -999;
     }
 
     .account-logo {
