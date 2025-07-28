@@ -27,6 +27,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .sidebar {
@@ -239,6 +240,8 @@ nav {
     font-family: "Titillium Web", sans-serif;
     font-weight: 500;
     text-align: justify;
+    z-index: -1;
+
 }
 
 .content h1 {
@@ -301,7 +304,7 @@ span {
  font-weight: bold;
  cursor: pointer;
  position: relative;
- z-index: 1;
+ z-index: -1;
  overflow: hidden;
  font-family: "Founder", sans-serif;
 }
