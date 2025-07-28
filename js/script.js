@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // === TEXT SWAPPER ===
     const textElement = document.querySelector("#text-transition");
-    const texts = ["I'm a Full Stack", "I'm a Frontend", "I'm a Backend"];
+    const texts = ["I'm a WEB", "I'm a MOBILE", "I'm a UI/UX"];
     let index = 0;
     let splitInstance;
 
