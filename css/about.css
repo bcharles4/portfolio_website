@@ -6,7 +6,6 @@
 .about {
 
     width: clamp(280px, 54%, 1040px);
-
     justify-content: center;
     align-items: center;
     margin: 5% auto;
