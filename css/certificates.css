@@ -22,7 +22,7 @@
 }
 
 .certificate img {
-    width: clamp(200px, 30vw, 300px);
+    width: clamp(300px, 30vw, 300px);
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -51,8 +51,8 @@
 .hidden-shop {
    margin: 20px;
    font-family: 'Titillium Web', sans-serif;
-   color: #999;
-   font-size: clamp(.7rem, 1vw, 1rem);
+   color: #333;
+   font-size: clamp(.5rem, .8vw, 1rem);
 }
 
 .hidden-shop button {
