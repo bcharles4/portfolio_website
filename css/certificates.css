@@ -44,3 +44,23 @@
         transform: scale(1.05);
     }
 }
+
+
+.hidden-shop {
+   margin: 20px;
+   font-family: 'Titillium Web', sans-serif;
+   color: #999;
+   font-size: clamp(.7rem, 1vw, 1rem);
+}
+
+.hidden-shop button {
+    margin: 4px;
+    padding: 8px;
+    background-color: #222;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(.8rem, 1.2vw, 1rem);
+}
