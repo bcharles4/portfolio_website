@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 .certificate-con {
     display: flex;
     flex-direction: column;
@@ -34,10 +40,6 @@
     .certificates {
         flex-direction: column;
         align-items: center;
-    }
-
-    .certificate img {
-        width: 100%;
     }
 
     .certificate img:hover {
