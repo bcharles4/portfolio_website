@@ -1,0 +1,30 @@
+.certificate-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.certificates {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.certificate img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(5px 5px 1px #999 );
+}
+
+.certificate img:hover {
+    transform: scale(1.05);
+}
