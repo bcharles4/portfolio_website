@@ -22,7 +22,7 @@
 }
 
 .certificate img {
-    width: clamp(300px, 30vw, 300px);
+    width: clamp(300px, 40vw, 400px);
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
