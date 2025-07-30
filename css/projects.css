@@ -12,7 +12,7 @@ body {
     width: clamp(280px, 54%, 1040px);
     justify-content: center;
     align-items: center;
-    margin: 10% auto 20px auto;
+    margin: 10% auto 5% auto;
     text-align: justify;
 }
 
@@ -36,9 +36,7 @@ body {
   inherits: true;
 }
 /* general styling */
-html {
-	color-scheme: dark light;
-}
+
 img{
   max-width: 100%;
 }
@@ -214,6 +212,7 @@ input:checked + .card{
 }
 .card-data > p{
   font-size: 0.9rem;
+  text-align: justify;
 
 }
 .card-data > h2,
@@ -273,7 +272,7 @@ input:checked +.card > .card-img{
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
       
       
@@ -288,7 +287,11 @@ input:checked +.card > .card-img{
     }
 
     .card-data  {
-        margin-top: -30%
+        margin-top: -50%
+    }
+
+    .card-data > p {
+        margin-top: -20%;
     }
 
     .projects h2 {
