@@ -128,4 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             closeImageModal();
         }
     });
+
+
+    
 });
