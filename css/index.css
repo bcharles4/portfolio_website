@@ -310,11 +310,11 @@ span {
  font-family: "Founder", sans-serif;
 }
 
-button:hover {
+.btn button:hover {
  color: white;
 }
 
-button:after {
+.btn button:after {
  content: "";
  background: orangered;
  position: absolute;
@@ -327,7 +327,7 @@ button:after {
  transition: all 0.5s;
 }
 
-button:hover:after {
+.btn button:hover:after {
  transform: skewX(-45deg) scale(1, 1);
  -webkit-transition: all 0.5s;
  transition: all 0.5s;
