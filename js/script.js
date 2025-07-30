@@ -87,3 +87,45 @@ window.addEventListener("DOMContentLoaded", () => {
         isMenuVisible = !isMenuVisible;
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('.card-img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    // Open Modal with animation
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImg.src = img.src;
+            modal.style.display = 'flex';
+
+            gsap.fromTo(".image-modal-content", 
+                { scale: 0.6, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" }
+            );
+        });
+    });
+
+    // Close Modal with animation
+    function closeImageModal() {
+        gsap.to(".image-modal-content", {
+            scale: 0.6,
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.in",
+            onComplete: () => {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    closeModal.addEventListener('click', closeImageModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeImageModal();
+        }
+    });
+});

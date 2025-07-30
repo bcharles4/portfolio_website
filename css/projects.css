@@ -198,13 +198,15 @@ input:checked + .card{
 }
 /* next card +6 checked - place behind */
 .card:has(+input + .card +input + .card +input  + .card +input +input + .card +input + .card +input + .card + input:checked){
-  z-index:3;
+  z-index:3; 
 }
+
 
 .card-data{
   display: grid;
   gap: 1rem;
 }
+
 .card-data > .card-num{
   opacity: var(--data-opacity, 0);
   font-size: .8rem;
