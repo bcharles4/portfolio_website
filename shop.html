@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/shop.css">
     <link rel="icon" href="images/account-logo.png" type="image/x-icon">
 
     <title>SystemBazaar</title>
@@ -39,22 +40,58 @@
         </div>
     </div>
 
+    <div class="main">
+       <div class="mainContent">
+    <h1>Welcome to System Bazaar</h1>
+    <p>Your one-stop solution for all your system needs.</p>
+
+    <!-- Top Filter Buttons -->
+    <div class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="web">Web</button>
+        <button data-filter="mobile">Mobile</button>
+        <button data-filter="mobileweb">Mobile + Web</button>
+    </div>
+
+    <!-- Card Container -->
+    <div class="display-cards">
+        <div class="card" data-type="web">
+            <img src="images/shop1.jpg" alt="Shop Item 1">
+            <h2>BARAKO SPEAK</h2>
+            <p>Web-based speech therapy tool.</p>
+        </div>
+        <div class="card" data-type="mobile">
+            <img src="images/shop2.jpg" alt="Shop Item 2">
+            <h2>AIDED THERAPEUTIC</h2>
+            <p>Mobile therapy assistant.</p>
+        </div>
+        <div class="card" data-type="mobileweb">
+            <img src="images/shop3.jpg" alt="Shop Item 3">
+            <h2>TRISAKAY</h2>
+            <p>Mobile + Web tricycle booking system.</p>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
     
 
 
 
-    <!-- GSAP and dependencies -->
-<script src="https://unpkg.com/split-type"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+        <!-- GSAP and dependencies -->
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
 
-<!-- Ionicons -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- Ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<!-- Your script LAST -->
-<script src="js/script.js"></script>
+        <!-- Your script LAST -->
+        <script src="js/script.js"></script>
 
 </body>
 </html>

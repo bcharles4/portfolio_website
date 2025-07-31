@@ -133,4 +133,29 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+     const buttons = document.querySelectorAll(".filter-buttons button");
+    const cards = document.querySelectorAll(".display-cards .card");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            cards.forEach(card => {
+                const type = card.getAttribute("data-type");
+                if (filter === "all" || filter === type) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+
+    
 });
+
+
