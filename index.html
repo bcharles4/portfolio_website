@@ -235,7 +235,60 @@
                 </div>
 
                 <script>
-               
+                document.getElementById('showAccessCodeBtn').onclick = function() {
+                    document.getElementById('accessCodeModal').style.display = 'flex';
+                    // GSAP animation for modal appearance
+                    gsap.fromTo(
+                        "#accessCodeModal > div",
+                        { scale: 0.8, opacity: 0 },
+                        { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }
+                    );
+                };
+                document.getElementById('closeAccessCodeModal').onclick = function() {
+                    // GSAP animation for modal disappearance
+                    gsap.to("#accessCodeModal > div", {
+                        scale: 0.8,
+                        opacity: 0,
+                        duration: 0.3,
+                        ease: "power2.in",
+                        onComplete: function() {
+                            document.getElementById('accessCodeModal').style.display = 'none';
+                            document.getElementById('accessCodeError').style.display = 'none';
+                            document.getElementById('accessCodeInput').value = '';
+                        }
+                    });
+                };
+                document.getElementById('submitAccessCodeBtn').onclick = function() {
+                    var code = document.getElementById('accessCodeInput').value;
+                    if(code === 'yourcode') {
+                        window.location.href = 'shop.html';
+                    } else {
+                        document.getElementById('accessCodeError').style.display = 'block';
+                        // Shake animation for error
+                        gsap.fromTo("#accessCodeModal > div", 
+                            { x: -10 }, 
+                            { x: 10, duration: 0.1, yoyo: true, repeat: 3, ease: "power1.inOut", onComplete: function() {
+                                gsap.to("#accessCodeModal > div", { x: 0, duration: 0.1 });
+                            }}
+                        );
+                    }
+                };
+                // Allow closing modal by clicking outside the modal content
+                document.getElementById('accessCodeModal').addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        gsap.to("#accessCodeModal > div", {
+                            scale: 0.8,
+                            opacity: 0,
+                            duration: 0.3,
+                            ease: "power2.in",
+                            onComplete: function() {
+                                document.getElementById('accessCodeModal').style.display = 'none';
+                                document.getElementById('accessCodeError').style.display = 'none';
+                                document.getElementById('accessCodeInput').value = '';
+                            }
+                        });
+                    }
+                });
                 </script>
 
             </div>
