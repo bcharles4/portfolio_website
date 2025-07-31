@@ -7,13 +7,14 @@ body{
 
 
 .main {
-    width: 100%;
+    width: 70%;
     height: 100dvh;
     display: flex;
+    margin: 0 auto;
 }
 
 .mainContent {
-    margin: 20px auto;
+    margin: 30px auto;
     text-align: center;
 }
 
@@ -21,6 +22,11 @@ body{
     font-family: 'Takota', sans-serif;
     font-size: clamp(2rem, 6vw, 3rem);
     color: #222;
+}
+
+.mainContent p {
+    font-size: clamp(.8rem, 2vw, 1rem);
+    color: #555;
 }
 
 .display-cards {
@@ -107,6 +113,7 @@ body{
   display: block;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-family: 'Titilium', sans-serif;
 }
 
 .action {
@@ -133,4 +140,14 @@ body{
   font-weight: 500;
   text-transform: uppercase;
   color: rgba(156, 163, 175, 1);
+}
+
+
+@media (max-width: 600px) {
+    .main {
+    }
+    .display-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
