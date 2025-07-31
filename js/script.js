@@ -156,7 +156,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
 
-
      document.getElementById('showAccessCodeBtn').onclick = function() {
                     document.getElementById('accessCodeModal').style.display = 'flex';
                     // GSAP animation for modal appearance
@@ -182,7 +181,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 };
                 document.getElementById('submitAccessCodeBtn').onclick = function() {
                     var code = document.getElementById('accessCodeInput').value;
-                    if(code === 'yourcode') {
+                    // I know you see the access code hehe but it's a static website so I dont need to put any security measures here.
+                    if(code === '403') {
                         window.location.href = 'shop.html';
                     } else {
                         document.getElementById('accessCodeError').style.display = 'block';
