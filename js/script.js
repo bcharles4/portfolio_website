@@ -147,7 +147,7 @@ window.addEventListener("DOMContentLoaded", () => {
             cards.forEach(card => {
                 const type = card.getAttribute("data-type");
                 if (filter === "all" || filter === type) {
-                    card.style.display = "block";
+                    card.style.display = "";
                 } else {
                     card.style.display = "none";
                 }
